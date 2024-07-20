@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    text-align: center;
+    overflow: hidden; /* Đảm bảo bong bóng không bị cắt khi bay ra ngoài */
+}
+
+.container {
+    position: relative;
+}
+
+.message {
+    font-size: 2em;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.cake {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.balloon {
+    position: absolute;
+    width: 100px; /* Kích thước bong bóng lớn hơn */
+    height: 140px; /* Kích thước bong bóng lớn hơn */
+    background: url('image\ copy\ 2.png') no-repeat center center;
+    background-size: contain;
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-600px);
+    }
+}
